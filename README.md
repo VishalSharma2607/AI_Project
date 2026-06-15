@@ -98,7 +98,19 @@ V_t(j) = max_i (V_{t-1}(i) × a_ij × b_j(o_t))
 * Matplotlib
 * Graphviz
 
----
+# Screenshots
+
+## Tic-Tac-Toe AI
+
+![Tic Tac Toe](images/tic_tac_toe.png)
+
+## Alpha-Beta Pruning Visualization
+
+![Alpha Beta Pruning](images/alpha_beta_tree.png)
+
+## Hidden Markov Model (Viterbi)
+
+![HMM Viterbi](images/hmm_plot.png)---
 
 # Project Structure
 
