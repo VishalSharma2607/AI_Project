@@ -1,103 +1,225 @@
-# AI Tic-Tac-Toe with Minimax
+# Classical Artificial Intelligence Algorithms in Python
 
-A simple Tic-Tac-Toe game built in Python where you play against an AI opponent. The AI uses the Minimax algorithm to analyze possible moves and choose the best one, making it a fun way to explore how decision-making works in artificial intelligence.
+This repository contains implementations of multiple classical Artificial Intelligence algorithms developed using Python. The project demonstrates important AI concepts such as adversarial search, optimization, probabilistic reasoning, and game-playing intelligence.
 
-## About the Project
+The repository currently includes:
 
-This project was created to understand the basics of AI in games and how algorithms can be used to make intelligent decisions. Instead of making random moves, the AI evaluates different game scenarios and selects the move that gives it the highest chance of winning.
+1. AI Tic-Tac-Toe using Minimax Algorithm
+2. Alpha-Beta Pruning Tree Visualization
+3. Hidden Markov Model using Viterbi Algorithm
 
-The game features a graphical user interface built with Tkinter, allowing players to interact with the board easily.
+---
 
-## Features
+# Project Overview
 
-* Play Tic-Tac-Toe against an AI opponent
-* AI powered by the Minimax algorithm
-* Interactive and user-friendly GUI using Tkinter
-* Automatic detection of wins, losses, and draws
-* Restart option to play multiple games
-* Demonstrates basic concepts of game AI and search algorithms
+This project showcases practical implementations of fundamental AI algorithms commonly studied in Artificial Intelligence and Machine Learning courses.
 
-## Technologies Used
+Each implementation focuses on a different area of AI:
+
+| Project            | AI Concept                             |
+| ------------------ | -------------------------------------- |
+| Tic-Tac-Toe AI     | Adversarial Search / Game AI           |
+| Alpha-Beta Pruning | Search Optimization                    |
+| HMM + Viterbi      | Probabilistic AI / Sequence Prediction |
+
+The implementations include graphical visualizations, recursive algorithms, probability modeling, and intelligent decision-making.
+
+---
+
+# Included Projects
+
+## 1. AI Tic-Tac-Toe using Minimax Algorithm
+
+An intelligent Tic-Tac-Toe game where the player competes against an unbeatable AI agent.
+
+### Features
+
+* Human vs AI gameplay
+* AI decision making using Minimax
+* GUI using Tkinter
+* Restart functionality
+* Win/Loss/Draw detection
+
+### AI Concept
+
+```text id="5dy6qq"
+Minimax(node) =
+    max(children)   → AI Turn
+    min(children)   → Player Turn
+```
+
+---
+
+## 2. Alpha-Beta Pruning Tree Visualization
+
+A visualization-based implementation of the Alpha-Beta Pruning algorithm used to optimize Minimax search trees.
+
+### Features
+
+* MAX/MIN tree visualization
+* Alpha and Beta tracking
+* Pruned branch identification
+* Graph generation using Graphviz
+
+### Pruning Condition
+
+```text id="9kmxal"
+β ≤ α
+```
+
+When this condition becomes true, unnecessary branches are pruned to improve efficiency.
+
+---
+
+## 3. Hidden Markov Model using Viterbi Algorithm
+
+Implementation of a Hidden Markov Model (HMM) using the Viterbi Algorithm to predict the most likely hidden state sequence.
+
+### Features
+
+* Transition and emission probability matrices
+* Dynamic programming implementation
+* Most probable hidden state prediction
+* Probability visualization using Matplotlib
+
+### Viterbi Formula
+
+```text id="p6qgxh"
+V_t(j) = max_i (V_{t-1}(i) × a_ij × b_j(o_t))
+```
+
+---
+
+# Technologies Used
 
 * Python
 * Tkinter
-* Minimax Algorithm
-* Recursion
+* NumPy
+* Matplotlib
+* Graphviz
 
-## How the AI Makes Decisions
+---
 
-The AI uses the Minimax algorithm, a popular strategy used in turn-based games. It explores all possible future moves and evaluates the outcome of each scenario before making a decision.
+# Project Structure
 
-In simple terms, the AI:
-
-1. Looks at every possible move.
-2. Predicts how the player might respond.
-3. Evaluates future game states.
-4. Chooses the move that leads to the best possible outcome.
-
-Because the algorithm always chooses the optimal move, beating the AI is extremely difficult.
-
-## Project Structure
-
-```text
+```text id="jlwm6t"
 AI_Project/
 │
 ├── tic_tac_toe.py
+├── alpha_beta_pruning.py
+├── hmm_viterbi.py
+├── alpha_beta_tree.gv.png
+├── hmm_probability_plot.png
 ├── README.md
+├── requirements.txt
+├── .gitignore
 ```
 
-## Running the Project
+---
 
-### Clone the repository
+# How to Run the Projects
 
-```bash
+## 1. Clone the Repository
+
+```bash id="yz7yoh"
 
 ```
 
-### Navigate to the project folder
+## 2. Open Project Folder
 
-```bash
+```bash id="9az3ie"
 cd AI_Project
 ```
 
-### Run the game
+## 3. Create Virtual Environment
 
-```bash
+```bash id="3qbb1q"
+python -m venv venv
+```
+
+## 4. Activate Virtual Environment
+
+### Windows PowerShell
+
+```powershell id="jlwm1k"
+.\venv\Scripts\Activate.ps1
+```
+
+## 5. Install Dependencies
+
+```bash id="jlwm0n"
+pip install -r requirements.txt
+```
+
+---
+
+# Run Individual Projects
+
+## Tic-Tac-Toe AI
+
+```bash id="jlwm0m"
 python tic_tac_toe.py
 ```
 
-## Game Rules
+## Alpha-Beta Pruning Visualization
 
-* You play as **X**
-* The AI plays as **O**
-* Match three symbols in a row, column, or diagonal to win
-* If the board fills up without a winner, the game ends in a draw
+```bash id="jlwm0l"
+python alpha_beta_pruning.py
+```
 
-## What I Learned
+## Hidden Markov Model using Viterbi Algorithm
 
-Building this project helped me gain hands-on experience with:
+```bash id="jlwm0k"
+python hmm_viterbi.py
+```
+
+---
+
+# Screenshots
+
+Add screenshots of:
+
+* Tic-Tac-Toe gameplay
+* Alpha-Beta pruning tree visualization
+* HMM probability graph
+
+---
+
+# Learning Outcomes
+
+This project helped in understanding:
 
 * Artificial Intelligence fundamentals
-* Game tree search techniques
-* Recursive programming
-* Decision-making algorithms
-* GUI development using Tkinter
+* Adversarial Search
+* Minimax Algorithm
+* Alpha-Beta Pruning
+* Hidden Markov Models
+* Dynamic Programming
+* Recursive Algorithms
+* Probability-Based Decision Making
+* Data Visualization in Python
 
-## Future Improvements
+---
 
-Some features that could be added in future versions:
+# Future Improvements
 
-* Multiple difficulty levels
-* Alpha-Beta Pruning for faster decision making
-* Score tracking system
-* Improved UI design
-* Sound effects and animations
-* Online multiplayer support
+Possible future enhancements:
 
-## Author
+* GUI for Alpha-Beta visualization
+* Interactive HMM simulations
+* Alpha-Beta optimized Tic-Tac-Toe AI
+* Web-based implementation
+* Multiplayer support
+* Advanced AI visualizations
 
-**Vishal Sharma**
+---
 
-## License
+# Author
 
-This project was developed for educational and learning purposes.
+Vishal Sharma
+
+---
+
+# License
+
+This project is created for educational and learning purposes.
