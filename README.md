@@ -122,7 +122,7 @@ AI_Project/
 ## 1. Clone the Repository
 
 ```bash id="yz7yoh"
-
+git clone https://github.com/VishalSharma2607/AI_Project
 ```
 
 ## 2. Open Project Folder
